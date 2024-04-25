@@ -22,18 +22,18 @@
 
 ### Инструкции по запуску обоих сервисов:
 1. Склонировать репозиторий:
-git clone https://github.com/Ivan-k35/DjangoServices.git
+`git clone https://github.com/Ivan-k35/DjangoServices.git`
 
 2. Перейти в каталог проекта:
-cd DjangoServices
+`cd DjangoServices`
 
 3. Запустить оба сервиса:
-docker-compose up -d
+`docker-compose up -d`
 
 Примечание: В случае ошибки соединения с базой данных при первом запуске, выполните следующие команды:
 
-1. Остановите сервисы этой командой: docker-compose down 
-2. Заново запустите: docker-compose up -d
+1. Остановите сервисы этой командой: `docker-compose down` 
+2. Заново запустите: `docker-compose up -d`
 
 Документация Swagger доступна по следующим адресам:
 - Для первого сервиса: [http://127.0.0.1/api/producer/swagger/](http://127.0.0.1/api/producer/swagger/)
