@@ -25,7 +25,7 @@ services:
       - zookeeper
 
   nginx:
-    image: nginx:latest
+    image: nginx:1.25
     container_name: nginx
     restart: always
     volumes:
@@ -41,7 +41,7 @@ services:
       - django_consumer
 
   db_producer:
-    image: postgres:latest
+    image: postgres:16.2
     container_name: db_producer
     restart: always
     environment:
@@ -55,7 +55,7 @@ services:
 
 
   db_consumer:
-    image: postgres:latest
+    image: postgres:16.2
     container_name: db_consumer
     restart: always
     environment:
@@ -105,7 +105,7 @@ services:
              exec gunicorn consumer_service.wsgi:application -b 0.0.0.0:8001"
 
   redis:
-    image: redis:latest
+    image: redis:7.2
     container_name: redis
     restart: always
     ports:
